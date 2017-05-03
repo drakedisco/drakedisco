@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <meta name="description" content="Drake Disco">
+
+    <title>Drake Disco - Get Down With Drake</title>
+    <link href="http://walker.kim/drakedisco/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link charset="utf-8" href="http://walker.kim/drakedisco/style.css" rel="stylesheet" type=
+    "text/css">
+    <style type="text/css">
+    
+    #imagewrapper {
+    text-align:center
+}
+
+#imagewrapper img {
+    display:inline-block;
+    margin:0;
+}
+    
+    
+
+#hide
+    {
+    visibility: hidden;
+    opacity: 0;
+    }
+    
+    iframe#tumblr_controls {
+
+top: 0% !important;
+
+right:0% !important; 
+
+display:none !important;
+
+}
+
+    </style>
+    <script src="https://w.soundcloud.com/player/api.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+  <script>
+     function showhide()
+     {
+           var div = document.getElementById("my-content");
+    if (div.style.display !== "none") {
+        div.style.display = "none";
+    }
+    else {
+        div.style.display = "block";
+    }
+     }
+  </script>
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-6881481-25', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="imagewrapper">
+
+    <div id="preloader">
+        <div id="status">
+            &nbsp;
+        </div>
+    </div>
+    
+  
+
+
+
+
+<img src="http://blogfiles.wfmu.org/ED/images/Disco_ball.gif" alt="Mirror Ball" style="width:150px;height:172px;top:0;"></div>
+
+    
+<div id="my-content">
+<div id="sorry">
+
+    <h2>no audio on mobile, sorry :( <br><br> <img src="http://walker.kim/drakedisco/drake_tears.png" alt="Drake Disco" height="100" width="auto"></h2><button class="border wobble-vertical" id="button" onclick="showhide()">Whatever</button>
+</div>
+</div>
+  <div style="top: 0px;
+    position: fixed;
+    left: 20px;"><h2>DRAKE DISCO</h2></div>
+    
+    <div id="twitter" style="top: 20px;
+    position: fixed;
+    right: 20px;"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://drakedis.co/" data-text="Drake Disco - Get Down With Drake" data-size="large" data-hashtags="hotlinebling">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div>
+
+
+
+    <div id="soundcloud_player">
+        <div id="hide">
+            <iframe height="450" id="soundcloud_player_iframe" name=
+            "soundcloud_player_iframe" src=
+            "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/157868633"
+            width="480"></iframe>
+          
+          
+        
+            
+            
+        </div><br>
+        <script id="jsbin-javascript">
+var widget = null;
+        var song_indexes = [];
+        var current_index = 0;
+
+        $(function() {
+        var iframe = document.querySelector('#soundcloud_player iframe');
+        widget = SC.Widget(iframe);        
+        widget.bind(SC.Widget.Events.READY, function() {
+        widget.bind(SC.Widget.Events.FINISH, function() {        
+            play_next_shuffled_song();
+        });
+
+        widget.getSounds(function(sounds) {
+            create_shuffled_indexes(sounds.length);
+            play_next_shuffled_song();
+        });               
+        });
+        $("#button_sc_next").on("click", play_next_shuffled_song);
+        });
+
+        function play_next_shuffled_song() {
+        if (current_index >= song_indexes.length) {
+        current_index = 0;
+        }
+        var track_number = song_indexes[current_index];
+        current_index++;
+        widget.skip(track_number);
+        console.log(track_number);
+        }
+
+        function create_shuffled_indexes (num_songs) {
+        for (var i=0;i<num_songs;i++) {
+        song_indexes.push(i);
+        }
+        song_indexes = shuffle(song_indexes);
+        }
+
+        //+ Jonas Raoni Soares Silva
+        //@ http://jsfromhell.com/array/shuffle [v1.0]
+        function shuffle(o){ //v1.0
+        for(var j, x, i = o.length; i; j = parseInt((Math.random() * i),10), x = o[--i], o[i] = o[j], o[j] = x);
+        return o;
+        }
+        </script>
+
+        <div id="image"></div>
+
+        <div id="footer">
+            <div id="wrapper">
+                <div id="next">
+                    <a class="border wobble-vertical" href="javascript:void"
+                    id="next">ANOTHER MOVE</a>
+                </div>
+
+                <div id="nextsong">
+                    <button class="border wobble-vertical" id=
+                    "button_sc_next">ANOTHER GROOVE</button>
+                </div>
+
+            </div><h3>Made by <a class="credit" href="https://twitter.com/kimw" target="_blank">@kimw</a></h3>
+            
+        </div><!-- Preloader -->
+        <script type="text/javascript">
+//<![CDATA[
+        $(window).load(function() { // makes sure the whole site is loaded
+        $('#status').fadeOut(); // will first fade out the loading animation
+        $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
+        $('body').delay(350).css({'overflow':'visible'});
+        })
+        //]]>
+        </script> <script src=
+        "https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> <script src="https://cdn.jsdelivr.net/audiojs/0.1/audio.js"></script> <script type="text/javascript">
+var urls = [
+        
+        "http://pixel.nymag.com/imgs/daily/vulture/2015/10/20/drake-dance/drake.w529.h352.gif",
+        "http://pixel.nymag.com/imgs/daily/vulture/2015/10/20/drake-dance/drake-2.w529.h352.gif",
+        "http://pixel.nymag.com/imgs/daily/vulture/2015/10/20/drake-dance/drake-3.w529.h352.gif",
+        "http://pixel.nymag.com/imgs/daily/vulture/2015/10/20/drake-dance/drake-4.w529.h352.gif",
+        "http://pixel.nymag.com/imgs/daily/vulture/2015/10/20/drake-dance/drake-5.w529.h352.gif",
+        "http://pixel.nymag.com/imgs/daily/vulture/2015/10/20/drake-dance/drake-6.w529.h352.gif",
+        "http://pixel.nymag.com/imgs/daily/vulture/2015/10/20/drake-dance/drake-8.w529.h352.gif",
+        "http://pixel.nymag.com/imgs/daily/vulture/2015/10/20/drake-dance/drake-9.w529.h352.gif",
+        "http://pixel.nymag.com/imgs/daily/vulture/2015/10/20/drake-dance/drake-10.w529.h352.gif",
+        "http://pixel.nymag.com/imgs/daily/vulture/2015/10/20/drake-dance/drake-11.w529.h352.gif",
+        "http://pixel.nymag.com/imgs/daily/vulture/2015/10/20/drake-dance/drake-12.w529.h352.gif",
+        "http://pixel.nymag.com/imgs/daily/vulture/2015/10/20/drake-dance/drake-13.w529.h352.gif",
+             "http://pixel.nymag.com/imgs/daily/vulture/2015/10/20/drake-dance/drake-14.w529.h352.gif",
+                  "http://pixel.nymag.com/imgs/daily/vulture/2015/10/20/drake-dance/drake-16.w529.h352.gif", "https://media.giphy.com/media/xTiTnxatmQVapUTMDC/giphy.gif", "https://media.giphy.com/media/3o85xJohCZUc524lSU/giphy.gif", "https://media.giphy.com/media/26BkNIqbzQIXdUi08/giphy.gif", "https://media.giphy.com/media/xTiTnmnv4T9l6Oz1ZK/giphy.gif", "https://media.giphy.com/media/3o85xosW6qQsCsZ3Ve/giphy.gif", "https://media.giphy.com/media/3o85xHvaQXL5UULxfi/giphy.gif", "https://media.giphy.com/media/3o85xjUJWmzkjzCH0Q/giphy.gif", "https://media.giphy.com/media/xTiTngn11re4UOWYMw/giphy.gif", "https://media.giphy.com/media/xTiTnHKIXicYsz99a8/giphy.gif", "https://media.giphy.com/media/3o85xJBK3KRYtYLAu4/giphy.gif", "https://media.giphy.com/media/xTiTnubwOKIxbhQ4DK/giphy.gif", "https://media.giphy.com/media/xTiTnGaTh0zCUzbzzy/giphy.gif", "https://media.giphy.com/media/xTiTnDdzlr8xMUjMgU/giphy.gif", "https://media.giphy.com/media/3o85xG2NH3auozB3Xy/giphy.gif", "https://media.giphy.com/media/3o85xpVO7cQKEWYO40/giphy.gif", "https://media.giphy.com/media/xTiTnqD0A3VkaNx6Yo/giphy.gif", "https://media.giphy.com/media/xTiTnH1K2onqsUZC5q/giphy.gif", "https://media.giphy.com/media/xTiTni3XZP1tQP02TS/giphy.gif", "https://media.giphy.com/media/xTiTnmZdWKjBQJkUUw/giphy.gif", "https://media.giphy.com/media/xTiTnAqiPkqDrZywdW/giphy.gif", "https://media.giphy.com/media/xTiTne1leXBzc1lt9S/giphy.gif", "https://media.giphy.com/media/xTiTnkxWMaSvPWN6ik/giphy.gif", "https://media.giphy.com/media/xTiTnBj5URDeOGpTY4/giphy.gif", "https://media.giphy.com/media/xTiTnwP9qjZfaoLu6c/giphy.gif", "https://media.giphy.com/media/xTiTnAex2HhWZBcHcs/giphy.gif", "https://media.giphy.com/media/3o85xn9Wj8CrgUmX6g/giphy.gif",
+        
+        
+        ];
+
+        $("#next").click(chooseNext);
+
+        function chooseNext(e) {
+        var randomUrl = urls[Math.floor(Math.random() * urls.length)];
+
+        $("#image").css("background-image", "url('" + randomUrl + "')");
+
+        return false;
+        }
+
+        chooseNext();
+        </script>
+    </div>
+
+</body>
+</html>
